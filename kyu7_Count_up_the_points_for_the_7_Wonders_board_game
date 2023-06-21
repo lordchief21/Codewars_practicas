@@ -1,0 +1,19 @@
+
+compass :int
+gears : int
+tablets : int
+
+def seven_wonders_science(compasses, gears, tablets):
+    # TODO: Code the solution here
+    points = 7
+    
+    if all(params == 0 for params in (compasses,gears,tablets)):
+        points = 0
+        
+    else:
+        points = compasses **2 + gears **2 + tablets **2 + min(compasses,gears,tablets)*7
+    
+    print(points)
+
+
+seven_wonders_science(4,2,2)
